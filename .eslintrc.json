@@ -32,6 +32,8 @@
     "rules": {
       "prettier/prettier": "error",
       "react/jsx-one-expression-per-line": "off",
+      "react/jsx-props-no-spreading": "off", /* desabilitar regra que não permite o spread. Ex: <input {...props} />. Caminho: components/input/index.tsx */
+      "react/prop-types": "off", /* desabilitar porque isso seria necessário caso não estivesse usando typescript, ele força ter q tipar, mas já está sendo feito */
       "react-hooks/rules-of-hooks":"error",
       "react-hooks/exhaustive-deps": "warn",
       "react/jsx-filename-extension": [1, { "extensions": [".tsx"]}],
