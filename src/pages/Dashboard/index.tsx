@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FiPower, FiClock } from 'react-icons/fi';
 import {
@@ -9,6 +9,8 @@ import {
   Content,
   Schedule,
   NextAppointment,
+  Section,
+  Appointment,
   Calendar,
 } from './styles';
 
@@ -16,7 +18,10 @@ import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const DashBoard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
+
   return (
     <Container>
       <Header>
@@ -61,6 +66,78 @@ const DashBoard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/55188229?s=460&u=3710e9b65c49bcd1e49501bac8deac3e417c3e18&v=4"
+                  alt="Robson Souza"
+                />
+
+                <strong>Robson Souza</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/55188229?s=460&u=3710e9b65c49bcd1e49501bac8deac3e417c3e18&v=4"
+                  alt="Robson Souza"
+                />
+
+                <strong>Robson Souza</strong>
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/55188229?s=460&u=3710e9b65c49bcd1e49501bac8deac3e417c3e18&v=4"
+                  alt="Robson Souza"
+                />
+
+                <strong>Robson Souza</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/55188229?s=460&u=3710e9b65c49bcd1e49501bac8deac3e417c3e18&v=4"
+                  alt="Robson Souza"
+                />
+
+                <strong>Robson Souza</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
         <Calendar />
       </Content>
